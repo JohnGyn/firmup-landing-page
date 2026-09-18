@@ -70,7 +70,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand span { color: var(--gold); font-family: var(--font-display); font-size: 27px; font-weight: 400; font-style: italic; }
 .nav-buy { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-size: 13px; font-weight: 800; }
 
-.hero-section { min-height: calc(100svh - 124px); max-height: 880px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr); max-width: 1180px; margin: auto; padding: 32px 28px 76px; align-items: center; gap: 64px; }
+.hero-section { min-height: clamp(660px, calc(100svh - 124px), 780px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr); max-width: 1180px; margin: auto; padding: 32px 28px 76px; align-items: center; gap: 64px; }
 .hero-copy { max-width: 650px; position: relative; z-index: 2; }
 .eyebrow, .kicker { display: flex; align-items: center; gap: 8px; color: var(--primary); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
 .hero-copy h1, h2 { font-family: var(--font-display); font-weight: 400; letter-spacing: 0; }
@@ -195,13 +195,13 @@ footer .legal { max-width: 650px; margin: 25px auto 0; font-size: 10px; line-hei
   .promo-strip { flex-direction: column; gap: 2px; font-size: 10px; }
   .site-nav { height: 66px; padding: 0 18px; }
   .nav-buy { font-size: 0; width: 38px; height: 38px; border: 1px solid var(--border); justify-content: center; border-radius: 50%; }
-  .hero-section { min-height: auto; max-height: none; grid-template-columns: 1fr; padding: 38px 18px 50px; gap: 35px; }
-  .hero-copy h1 { font-size: 53px; }
+  .hero-section { min-height: auto; grid-template-columns: 1fr; padding: 26px 18px 50px; gap: 25px; }
+  .hero-copy h1 { font-size: 45px; margin: 17px 0 20px; }
   .hero-lead { font-size: 15px; line-height: 1.6; }
-  .hero-points { display: grid; margin-bottom: 26px; }
+  .hero-points { display: grid; margin: 20px 0 24px; }
   .hero-copy .cta { width: 100%; }
   .hero-visual { min-height: 0; order: -1; }
-  .hero-image-wrap { aspect-ratio: 1.12 / 1; border-radius: 46% 46% 8px 8px; }
+  .hero-image-wrap { width: 100%; height: 260px; aspect-ratio: auto; border-radius: 46% 46% 8px 8px; }
   .hero-stamp { width: 100px; height: 100px; left: 1%; bottom: -6%; }
   .trust-bar { grid-template-columns: 1fr; padding: 23px 18px; gap: 17px; }
   .trust-bar div { justify-content: flex-start; max-width: 235px; margin: auto; width: 100%; }
