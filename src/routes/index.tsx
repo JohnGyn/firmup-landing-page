@@ -214,7 +214,7 @@ function FirmupLanding() {
               <p className="price-prefix">à vista por</p>
               <div className="price"><sup>R$</sup><strong>{offer.price}</strong><span>,00</span></div>
               <p className="installment">ou no cartão em até 12x</p>
-              <BuyLink href={offer.link} dark={offer.featured}>Comprar agora</BuyLink>
+              <BuyLink href={offer.link} dark={offer.featured ?? false}>Comprar agora</BuyLink>
             </article>
           ))}
         </div>
