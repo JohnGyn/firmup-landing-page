@@ -14,6 +14,7 @@ import {
   Truck,
 } from "lucide-react";
 
+import bottlePhoto from "@/assets/firmup-bottle.png";
 import resultOne from "@/assets/firmup-11.png.asset.json";
 import resultTwo from "@/assets/firmup-12.png.asset.json";
 import ingredients from "@/assets/firmup-13.png.asset.json";
