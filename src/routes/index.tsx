@@ -14,6 +14,7 @@ import {
   Truck,
 } from "lucide-react";
 
+import bottlePhoto from "@/assets/firmup-bottle.png";
 import resultOne from "@/assets/firmup-11.png.asset.json";
 import resultTwo from "@/assets/firmup-12.png.asset.json";
 import ingredients from "@/assets/firmup-13.png.asset.json";
@@ -207,8 +208,10 @@ function FirmupLanding() {
               {offer.note && <div className="offer-tag">{offer.note}</div>}
               <p className="offer-treatment">{offer.treatment}</p>
               <h3>{offer.bottles}</h3>
-              <div className="bottle-motif" aria-hidden="true">
-                {Array.from({ length: Math.min(Number.parseInt(offer.bottles), 5) }, (_, index) => <span key={index} />)}
+              <div className="bottle-motif">
+                {Array.from({ length: Math.min(Number.parseInt(offer.bottles), 5) }, (_, index) => (
+                  <img key={index} src={bottlePhoto} alt={index === 0 ? `Frasco do sérum FIRMup — ${offer.bottles}` : ""} loading="lazy" />
+                ))}
                 {offer.bottles.startsWith("12") && <b>+7</b>}
               </div>
               <p className="price-prefix">à vista por</p>
