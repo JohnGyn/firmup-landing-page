@@ -268,7 +268,7 @@ const faqs = [
   ],
   [
     "Em quanto tempo recebo meu pedido?",
-    "Os pedidos são enviados prioritariamente a partir de um Centro de Distribuição Mercado Livre Full, com código de rastreamento. A entrega expressa é estimada em 24 a 48 horas, podendo variar conforme CEP, horário de aprovação do pagamento, disponibilidade de estoque e condições logísticas informadas no checkout.",
+    "A entrega é grátis para todo o Brasil, com código de rastreamento. O prazo estimado para seu CEP é informado no checkout e pode variar conforme a aprovação do pagamento, a disponibilidade de estoque e as condições logísticas.",
   ],
   [
     "Como funciona a Garantia Blindada de 7 Dias?",
@@ -421,8 +421,7 @@ function FirmupLanding() {
       <div className="lp-topbar">
         <Truck size={16} aria-hidden="true" />
         <div>
-          <strong>ENVIO IMEDIATO PELO MERCADO LIVRE FULL</strong>
-          <span>Entrega expressa estimada em 24 a 48 horas</span>
+          <strong>ENTREGA GRÁTIS PARA TODO O BRASIL!</strong>
         </div>
       </div>
 
