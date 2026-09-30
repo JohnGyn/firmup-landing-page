@@ -177,7 +177,8 @@ const offers = [
     image: "/images/offers/kit-1.png",
     duration: "RITUAL DE 1 MÊS",
     description: "Para conhecer o efeito lifting imediato e começar seu cuidado diário.",
-    price: "147",
+    price: "157",
+    cents: ",90",
     benefits: [
       "1 frasco de FIRMup — 15 ml",
       "Uso diário por aproximadamente 1 mês",
@@ -922,7 +923,7 @@ function FirmupLanding() {
                 <div className="offer-price">
                   <span>R$</span>
                   <strong>{offer.price}</strong>
-                  <sup>,00</sup>
+                  <sup>{offer.cents ?? ",00"}</sup>
                   <small>à vista</small>
                 </div>
                 <p className="offer-installment">
@@ -1088,7 +1089,7 @@ function FirmupLanding() {
         <div className="mobile-buy-bar">
           <div>
             <small>A partir de</small>
-            <strong>R$ 147</strong>
+            <strong>R$ 157,90</strong>
           </div>
           <a href="#kits">
             ESCOLHER MEU KIT <ArrowRight size={17} />
