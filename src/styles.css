@@ -1658,6 +1658,65 @@ img {
   color: white;
   background: var(--wine);
 }
+.offer-annual {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(300px, 1.35fr) minmax(225px, 0.8fr);
+  align-items: center;
+  gap: 30px;
+  margin-top: 28px;
+  padding: 26px 34px;
+  color: var(--foreground);
+  background: var(--pearl);
+  border: 2px solid var(--champagne);
+  box-shadow: 0 22px 50px rgb(0 0 0 / 18%);
+}
+.offer-annual__image img {
+  display: block;
+  width: 100%;
+  max-height: 285px;
+  object-fit: contain;
+  filter: drop-shadow(7px 10px 9px rgb(52 25 33 / 15%));
+}
+.offer-annual__copy h3 {
+  margin: 0 0 12px;
+  color: var(--wine);
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+.offer-annual__copy > p:not(.offer-overline) {
+  margin: 0 0 17px;
+  color: var(--ink-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.offer-annual__copy ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.offer-annual__copy li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-muted);
+  font-size: 11px;
+}
+.offer-annual__copy li svg {
+  width: 15px;
+  height: 15px;
+  color: var(--champagne);
+  flex: 0 0 auto;
+}
+.offer-annual__action .lp-cta {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 12px;
+  font-size: 10px;
+}
 .payment-band {
   margin-top: 43px;
   display: flex;
@@ -1997,6 +2056,16 @@ img {
   .offer-editorial-callout {
     transform: translateX(-215px) rotate(-2deg) scale(0.9);
     transform-origin: right bottom;
+  }
+  .offer-annual {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 18px 28px;
+  }
+  .offer-annual__image {
+    grid-row: span 2;
+  }
+  .offer-annual__action {
+    grid-column: 2;
   }
   .compare-card {
     padding-right: 28px;
@@ -2532,6 +2601,26 @@ img {
     line-height: 1.55;
   }
   .offer-new .lp-cta {
+    font-size: 10px;
+  }
+  .offer-annual {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 22px;
+    padding: 25px 22px;
+  }
+  .offer-annual__image,
+  .offer-annual__action {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .offer-annual__image img {
+    max-height: 230px;
+  }
+  .offer-annual__copy h3 {
+    font-size: 33px;
+  }
+  .offer-annual__action .lp-cta {
     font-size: 10px;
   }
   .payment-band {

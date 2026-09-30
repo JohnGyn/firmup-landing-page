@@ -53,9 +53,10 @@ export const Route = createFileRoute("/")({
 });
 
 const checkoutLinks = {
-  one: "https://payfast.greenn.com.br/redirect/243668",
-  three: "https://payfast.greenn.com.br/redirect/243672",
-  five: "https://payfast.greenn.com.br/redirect/232238",
+  one: "https://ev.braip.com/checkout/plapzjkw/che4z80d?currency=BRL",
+  three: "https://ev.braip.com/checkout/plamnjkj/che4z80d?currency=BRL",
+  five: "https://ev.braip.com/checkout/pla98vo2/che4z80d?currency=BRL",
+  twelve: "https://ev.braip.com/checkout/pla89lom/che4z80d?currency=BRL",
 };
 
 const timeline = [
@@ -178,7 +179,6 @@ const offers = [
     duration: "RITUAL DE 1 MÊS",
     description: "Para conhecer o efeito lifting imediato e começar seu cuidado diário.",
     price: "157",
-    cents: ",90",
     benefits: [
       "1 frasco de FIRMup — 15 ml",
       "Uso diário por aproximadamente 1 mês",
@@ -943,6 +943,46 @@ function FirmupLanding() {
             ))}
           </div>
         </div>
+        <article className="offer-annual">
+          <div className="offer-annual__image">
+            <img
+              src="/images/offers/kit-12.png"
+              alt="Kit com 12 frascos de FIRMup"
+              loading="lazy"
+            />
+          </div>
+          <div className="offer-annual__copy">
+            <p className="offer-overline">CUIDADO PARA O ANO TODO</p>
+            <h3>TRATAMENTO PARA 1 ANO</h3>
+            <p>
+              12 frascos de FIRMup para manter seu ritual de cuidado diário por aproximadamente 12
+              meses.
+            </p>
+            <ul>
+              <li>
+                <Check aria-hidden="true" /> 12 frascos de 15 ml
+              </li>
+              <li>
+                <Check aria-hidden="true" /> Garantia Blindada de 7 Dias
+              </li>
+              <li>
+                <Check aria-hidden="true" /> Entrega grátis com rastreamento
+              </li>
+            </ul>
+          </div>
+          <div className="offer-annual__action">
+            <div className="offer-price">
+              <span>R$</span>
+              <strong>657</strong>
+              <sup>,00</sup>
+              <small>à vista</small>
+            </div>
+            <p className="offer-installment">
+              Ou parcele no cartão conforme as condições do checkout.
+            </p>
+            <Cta href={checkoutLinks.twelve}>QUERO O TRATAMENTO DE 1 ANO</Cta>
+          </div>
+        </article>
         <div className="payment-band">
           <span>
             <CreditCard /> Até 10x sem juros
@@ -1088,7 +1128,7 @@ function FirmupLanding() {
         <div className="mobile-buy-bar">
           <div>
             <small>A partir de</small>
-            <strong>R$ 157,90</strong>
+            <strong>R$ 157,00</strong>
           </div>
           <a href="#kits">
             ESCOLHER MEU KIT <ArrowRight size={17} />
