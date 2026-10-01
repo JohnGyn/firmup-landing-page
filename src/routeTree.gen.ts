@@ -10,33 +10,89 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ObrigadoIndexRouteImport } from './routes/obrigado/index'
+import { Route as ObrigadoBoletoRouteImport } from './routes/obrigado/boleto'
+import { Route as ObrigadoPixRouteImport } from './routes/obrigado/pix'
+import { Route as ObrigadoProcessandoRouteImport } from './routes/obrigado/processando'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObrigadoIndexRoute = ObrigadoIndexRouteImport.update({
+  id: '/obrigado/',
+  path: '/obrigado/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadoBoletoRoute = ObrigadoBoletoRouteImport.update({
+  id: '/obrigado/boleto',
+  path: '/obrigado/boleto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadoPixRoute = ObrigadoPixRouteImport.update({
+  id: '/obrigado/pix',
+  path: '/obrigado/pix',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadoProcessandoRoute = ObrigadoProcessandoRouteImport.update({
+  id: '/obrigado/processando',
+  path: '/obrigado/processando',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/obrigado/boleto': typeof ObrigadoBoletoRoute
+  '/obrigado/pix': typeof ObrigadoPixRoute
+  '/obrigado/processando': typeof ObrigadoProcessandoRoute
+  '/obrigado/': typeof ObrigadoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/obrigado/boleto': typeof ObrigadoBoletoRoute
+  '/obrigado/pix': typeof ObrigadoPixRoute
+  '/obrigado/processando': typeof ObrigadoProcessandoRoute
+  '/obrigado': typeof ObrigadoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/obrigado/boleto': typeof ObrigadoBoletoRoute
+  '/obrigado/pix': typeof ObrigadoPixRoute
+  '/obrigado/processando': typeof ObrigadoProcessandoRoute
+  '/obrigado/': typeof ObrigadoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/obrigado/boleto'
+    | '/obrigado/pix'
+    | '/obrigado/processando'
+    | '/obrigado/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/obrigado/boleto'
+    | '/obrigado/pix'
+    | '/obrigado/processando'
+    | '/obrigado'
+  id:
+    | '__root__'
+    | '/'
+    | '/obrigado/boleto'
+    | '/obrigado/pix'
+    | '/obrigado/processando'
+    | '/obrigado/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ObrigadoBoletoRoute: typeof ObrigadoBoletoRoute
+  ObrigadoPixRoute: typeof ObrigadoPixRoute
+  ObrigadoProcessandoRoute: typeof ObrigadoProcessandoRoute
+  ObrigadoIndexRoute: typeof ObrigadoIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +104,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obrigado/': {
+      id: '/obrigado/'
+      path: '/obrigado'
+      fullPath: '/obrigado/'
+      preLoaderRoute: typeof ObrigadoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigado/boleto': {
+      id: '/obrigado/boleto'
+      path: '/obrigado/boleto'
+      fullPath: '/obrigado/boleto'
+      preLoaderRoute: typeof ObrigadoBoletoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigado/pix': {
+      id: '/obrigado/pix'
+      path: '/obrigado/pix'
+      fullPath: '/obrigado/pix'
+      preLoaderRoute: typeof ObrigadoPixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigado/processando': {
+      id: '/obrigado/processando'
+      path: '/obrigado/processando'
+      fullPath: '/obrigado/processando'
+      preLoaderRoute: typeof ObrigadoProcessandoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ObrigadoBoletoRoute: ObrigadoBoletoRoute,
+  ObrigadoPixRoute: ObrigadoPixRoute,
+  ObrigadoProcessandoRoute: ObrigadoProcessandoRoute,
+  ObrigadoIndexRoute: ObrigadoIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
