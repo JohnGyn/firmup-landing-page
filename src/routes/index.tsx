@@ -1097,6 +1097,38 @@ function FirmupLanding() {
           <br />
           Biotecnologia K-Beauty para uma pele visivelmente mais firme, lisa e descansada.
         </p>
+        <div className="footer-socials" aria-label="Redes sociais">
+          <a
+            href="https://www.instagram.com/skincaredeimpacto/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram @skincaredeimpacto"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a
+            href="https://www.tiktok.com/@skincaredeimpacto"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok @skincaredeimpacto"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14.5 2h2.6c.2 2.2 1.6 3.7 3.9 4v2.8a8.3 8.3 0 0 1-3.8-1.2v6.2a6.2 6.2 0 1 1-6.2-6.2c.5 0 .9 0 1.4.1v2.9a3.2 3.2 0 1 0 1.9 3V2z" />
+            </svg>
+            <span>TikTok</span>
+          </a>
+        </div>
         <div className="footer-divider" />
         <p className="footer-legal">
           Produto cosmético de uso externo. Não ingerir. Não aplicar sobre pele irritada ou

@@ -1958,6 +1958,34 @@ img {
 .lp-footer > p strong {
   color: #eee5e7;
 }
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid rgb(197 168 128 / 35%);
+  border-radius: 4px;
+  color: #eee5e7;
+  font-size: 12px;
+  text-decoration: none;
+}
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  border-color: #c5a880;
+  color: #fff;
+}
+.footer-socials svg {
+  width: 18px;
+  height: 18px;
+}
 .footer-divider {
   max-width: 550px;
   height: 1px;
