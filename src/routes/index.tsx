@@ -45,8 +45,21 @@ export const Route = createFileRoute("/")({
         content:
           "Pele visivelmente mais firme, lisa e descansada — sem agulhas, sem paralisar a expressão e sem craquelar.",
       },
+      { property: "og:url", content: "https://skincaredeimpacto.com.br/" },
+      {
+        property: "og:image",
+        content: "https://skincaredeimpacto.com.br/images/results/mao-com-frasco.png",
+      },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "1254" },
+      { property: "og:image:height", content: "1254" },
+      { property: "og:image:alt", content: "Mão segurando o sérum FIRMup Lift Instantâneo" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content: "https://skincaredeimpacto.com.br/images/results/mao-com-frasco.png",
+      },
     ],
   }),
   component: FirmupLanding,
